@@ -30,12 +30,24 @@ export class App extends Component {
         }))
        
     }
-    handleFilter = ({target})=> {
+   
+
+//    handleFilterFilms = () => {
+//        const { contacts, filter } = this.state;
+//        console.log(filter);
+//     const result = contacts.filter((item) => {
+//       return filter === "All" ? item : item.filter === filter;
+//     });
+//     return result;
+//     };
+    
+
+     handleFilter = ({target})=> {
         this.setState({filter: target.value})
     }
-  
+
     render() {
-       
+     
       return (
     <div>
         <h1>Phonebook</h1>
@@ -43,7 +55,7 @@ export class App extends Component {
 
         <h2>Contacts</h2>
         <Filter  handleChange={this.handleFilter}/>
-              <ContactList contacts={this.state.contacts} onDeleteContact={this.handleDeleteContact} />
+        <ContactList contacts={this.state.contacts} onDeleteContact={this.handleDeleteContact} />
     </div>
   );
  }
